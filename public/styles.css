@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.menu {
+    font-size: 22px;
+}
+
+.menu a+a {
+    margin-left: 32px;
+}
+
+.menu a {
+    color: #777;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a.active {
+    font-weight: bold;
+    color: royalblue;
+}
+
+.menu a:hover {
+    color: royalblue;
+}
+
+.menu a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: royalblue;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.menu a:hover::after {
+    width: 100%;
+    transition: width 700ms cubic-bezier(1, 0.2, 0.65, 0.89);
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    width: 800px;
+    height: 650px;
+    margin: 45px auto;
+    display: flex;
+    animation: up 400ms;
+    box-shadow: 20px 20px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes up {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.avatar {
+    border-radius: 15px 0px 0px 15px;
+    width: 40%;
+}
+
+.details {
+    width: 60%;
+    padding: 40px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    color: royalblue;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.details div:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 6px;
+}
+
+.details div:last-child {
+    padding-top: 2px;
+    padding-bottom: 12px;
+}
+
+.details .item {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details .items div:nth-child(odd),
+.items div:nth-child(even) {
+    color: rgb(126, 110, 110);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    font-weight: normal;
+    color: #777;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 4px;
+    font-weight: normal;
+}
+
+span {
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 14px;
+}
+
+.escolaridade {
+    font-weight: normal;
+    outline: none;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 12px;
+    background-color: royalblue;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}

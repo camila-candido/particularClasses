@@ -1,0 +1,88 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<form class="card"  method="POST" action="/teachers">
+<section class="avatar" style="background: url(https://source.unsplash.com/collection/232812/500x500) no-repeat bottom center / cover" ></section>
+<section class="details">
+
+    <h3>Cadastro de Professor</h3>
+
+    <div class="item">
+        <div>Nome Completo</div>
+        <div>
+        <input 
+            type="text" 
+            name="name"
+            placeholder="Escreva seu nome" 
+        >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Coloque a URL da sua foto</div>
+        <div>
+            <input 
+                type="url" 
+                name="avatar_url" 
+                placeholder="http://"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Data de Nascimento</div>
+        <div>
+            <input 
+                type="date" 
+                name="date"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Selecione seu grau de escolaridade</div>
+        <div>
+            <select class="escolaridade" name="escolaridade">  
+                <option value="ensinoMedio"> Ensino Médio Completo </option> 
+                <option value="ensinoSuperior"> Ensino Superior Completo </option> 
+                <option value="mestrado"> Mestrado </option> 
+                <option value="doutorado"> Doutorado </option> 
+            </select>
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Tipo de aula</div>
+        <div>
+            <span><input type="radio" name="typeClass" value="presencial">Presencial</span>
+            <span><input type="radio" name="typeClass" value="aDistância">À Distancia</span>
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Área de Atuação</div>
+        <div>
+            <input 
+                type="text" 
+                name="areaAtuacao" 
+                placeholder=" Escreva sua área de Atuação"
+            >
+        </div>
+    </div>
+
+    <button type="submit"> Salvar </button>
+
+    {# <div class="items">
+        <div>
+            <label>Desde</label>
+        </div>
+        <div>
+            <label>01/01/2000</label>
+        </div>
+        
+    </div> #}
+</section>
+</form>
+
+{% endblock content %}
